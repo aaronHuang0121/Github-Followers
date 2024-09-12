@@ -16,6 +16,7 @@
 		93CE05402C92D47B000C28BE /* Github_FollowersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE053F2C92D47B000C28BE /* Github_FollowersUITestsLaunchTests.swift */; };
 		93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE054D2C92DA18000C28BE /* SearchViewController.swift */; };
 		93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE054F2C92DA4A000C28BE /* FavoritesListViewController.swift */; };
+		93CE05532C92E92D000C28BE /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05522C92E92D000C28BE /* GFButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		93CE053F2C92D47B000C28BE /* Github_FollowersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_FollowersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		93CE054D2C92DA18000C28BE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		93CE054F2C92DA4A000C28BE /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
+		93CE05522C92E92D000C28BE /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +106,8 @@
 				93CE051E2C92D479000C28BE /* SceneDelegate.swift */,
 				93CE05252C92D47B000C28BE /* Assets.xcassets */,
 				93CE05272C92D47B000C28BE /* LaunchScreen.storyboard */,
-				93CE054C2C92D9DD000C28BE /* Views */,
+				93CE054C2C92D9DD000C28BE /* ViewControllers */,
+				93CE05512C92E908000C28BE /* Views */,
 			);
 			path = "Github Followers";
 			sourceTree = "<group>";
@@ -126,11 +129,19 @@
 			path = "Github FollowersUITests";
 			sourceTree = "<group>";
 		};
-		93CE054C2C92D9DD000C28BE /* Views */ = {
+		93CE054C2C92D9DD000C28BE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				93CE054F2C92DA4A000C28BE /* FavoritesListViewController.swift */,
 				93CE054D2C92DA18000C28BE /* SearchViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		93CE05512C92E908000C28BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93CE05522C92E92D000C28BE /* GFButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
+				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
 				93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */,
 				93CE051F2C92D479000C28BE /* SceneDelegate.swift in Sources */,
