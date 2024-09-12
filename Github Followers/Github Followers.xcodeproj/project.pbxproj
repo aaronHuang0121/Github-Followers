@@ -17,6 +17,7 @@
 		93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE054D2C92DA18000C28BE /* SearchViewController.swift */; };
 		93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE054F2C92DA4A000C28BE /* FavoritesListViewController.swift */; };
 		93CE05532C92E92D000C28BE /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05522C92E92D000C28BE /* GFButton.swift */; };
+		93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05542C92EC36000C28BE /* GFTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		93CE054D2C92DA18000C28BE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		93CE054F2C92DA4A000C28BE /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
 		93CE05522C92E92D000C28BE /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		93CE05542C92EC36000C28BE /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				93CE05522C92E92D000C28BE /* GFButton.swift */,
+				93CE05542C92EC36000C28BE /* GFTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */,
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
 				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
