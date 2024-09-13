@@ -119,7 +119,7 @@
 				93CE05252C92D47B000C28BE /* Assets.xcassets */,
 				93CE055F2C93F19E000C28BE /* Extensions */,
 				93CE05272C92D47B000C28BE /* LaunchScreen.storyboard */,
-				93CE054C2C92D9DD000C28BE /* ViewControllers */,
+				93CE054C2C92D9DD000C28BE /* Screens */,
 				93CE05512C92E908000C28BE /* Views */,
 			);
 			path = "Github Followers";
@@ -142,7 +142,7 @@
 			path = "Github FollowersUITests";
 			sourceTree = "<group>";
 		};
-		93CE054C2C92D9DD000C28BE /* ViewControllers */ = {
+		93CE054C2C92D9DD000C28BE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				93CE054F2C92DA4A000C28BE /* FavoritesListViewController.swift */,
@@ -150,7 +150,7 @@
 				93CE054D2C92DA18000C28BE /* SearchViewController.swift */,
 				93CE055C2C93EBBA000C28BE /* AlertViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		93CE05512C92E908000C28BE /* Views */ = {
