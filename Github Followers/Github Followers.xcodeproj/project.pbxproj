@@ -23,6 +23,9 @@
 		93CE055B2C93EB51000C28BE /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE055A2C93EB51000C28BE /* GFBodyLabel.swift */; };
 		93CE055D2C93EBBA000C28BE /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE055C2C93EBBA000C28BE /* AlertViewController.swift */; };
 		93CE05612C93F1D1000C28BE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05602C93F1D1000C28BE /* UIViewController+Alert.swift */; };
+		93CE05682C941BDD000C28BE /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05672C941BDD000C28BE /* Follower.swift */; };
+		93CE056B2C941D78000C28BE /* FollowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE056A2C941D78000C28BE /* FollowerTests.swift */; };
+		93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		93CE055A2C93EB51000C28BE /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		93CE055C2C93EBBA000C28BE /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		93CE05602C93F1D1000C28BE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		93CE05672C941BDD000C28BE /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		93CE056A2C941D78000C28BE /* FollowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerTests.swift; sourceTree = "<group>"; };
+		93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+JSONDecoder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 				93CE05252C92D47B000C28BE /* Assets.xcassets */,
 				93CE055F2C93F19E000C28BE /* Extensions */,
 				93CE05272C92D47B000C28BE /* LaunchScreen.storyboard */,
+				93CE05662C941BCC000C28BE /* Models */,
 				93CE054C2C92D9DD000C28BE /* Screens */,
 				93CE05512C92E908000C28BE /* Views */,
 			);
@@ -129,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				93CE05332C92D47B000C28BE /* Github_FollowersTests.swift */,
+				93CE05692C941D51000C28BE /* Models */,
 			);
 			path = "Github FollowersTests";
 			sourceTree = "<group>";
@@ -168,8 +176,25 @@
 			isa = PBXGroup;
 			children = (
 				93CE05602C93F1D1000C28BE /* UIViewController+Alert.swift */,
+				93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93CE05662C941BCC000C28BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93CE05672C941BDD000C28BE /* Follower.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		93CE05692C941D51000C28BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93CE056A2C941D78000C28BE /* FollowerTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */,
 				93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */,
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
 				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
@@ -309,6 +335,7 @@
 				93CE05612C93F1D1000C28BE /* UIViewController+Alert.swift in Sources */,
 				93CE05572C92F6A0000C28BE /* FollowerListViewController.swift in Sources */,
 				93CE055B2C93EB51000C28BE /* GFBodyLabel.swift in Sources */,
+				93CE05682C941BDD000C28BE /* Follower.swift in Sources */,
 				93CE05592C93EA2E000C28BE /* GFTitleLabel.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
 				93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */,
@@ -321,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CE05342C92D47B000C28BE /* Github_FollowersTests.swift in Sources */,
+				93CE056B2C941D78000C28BE /* FollowerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
