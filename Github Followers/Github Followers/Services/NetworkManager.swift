@@ -6,11 +6,21 @@
 //
 
 import Foundation
+import UIKit
 
 final class NetworkManager {
     static let shared = NetworkManager()
+    private let session: URLSession
 
-    private init() {}
+    private init() {
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = 10   // 10s
+        config.urlCache = .init(
+            memoryCapacity: 20 * 1024 * 1024,
+            diskCapacity: 30 * 1024 * 1024
+        )
+        self.session = URLSession(configuration: config)
+    }
 
     private func makeRequest<P: Encodable>(
         httpMethod: HttpMethod,
@@ -52,7 +62,7 @@ final class NetworkManager {
     ) {
         switch makeRequest(httpMethod: httpMethod, endpoint: endpoint, params: params) {
         case .success(let request):
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            let task = session.dataTask(with: request) { data, response, error in
                 if let error {
                     Rest.logger.error("Request error: \(error.localizedDescription)")
                     completion(.failure(.unknowError(error)))
@@ -86,6 +96,51 @@ final class NetworkManager {
         case .failure(let error):
             completion(.failure(error))
         }
+    }
+
+    func downloadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
+        guard let url = URL(string: urlString) else { return }
+
+        if let image = getImageFromCache(url) {
+            completion(image)
+            return
+        }
+        Rest.logger.info("Download image: \(urlString)")
+        let task = session.dataTask(with: URLRequest(url: url)) { data, response, error in
+            if let error {
+                Rest.logger.error("Download image error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                Rest.logger.error("Download image error: \(RestError.invalidResponse(0).localizedDescription)")
+                return
+            }
+
+            guard 200...299 ~= httpResponse.statusCode else {
+                Rest.logger.error("Downalod image error: \(RestError.invalidResponse(httpResponse.statusCode).localizedDescription)")
+                return
+            }
+            
+            guard let data, let uiImage = UIImage(data: data) else {
+                Rest.logger.error("Download image error: \(RestError.invalidData.localizedDescription)")
+                return
+            }
+            
+            completion(uiImage)
+        }
+        
+        task.resume()
+    }
+
+    private func getImageFromCache(_ url: URL) -> UIImage? {
+        let request = URLRequest(url: url)
+        guard let cache = self.session.configuration.urlCache?.cachedResponse(for: request)?.data,
+           let uiImage = UIImage(data: cache) else {
+            return nil
+        }
+
+        return uiImage
     }
 }
 
