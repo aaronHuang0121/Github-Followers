@@ -30,6 +30,8 @@
 		93CE05722C9432BA000C28BE /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05712C9432BA000C28BE /* RestClient.swift */; };
 		93CE05752C943377000C28BE /* GetFollowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05742C943377000C28BE /* GetFollowers.swift */; };
 		93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */; };
+		93CE057C2C956AA4000C28BE /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE057B2C956AA4000C28BE /* FollowerCell.swift */; };
+		93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE057D2C956E46000C28BE /* GFAvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		93CE05742C943377000C28BE /* GetFollowers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFollowers.swift; sourceTree = "<group>"; };
 		93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ToQueryItems.swift"; sourceTree = "<group>"; };
 		93CE05792C955D4C000C28BE /* Configurations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configurations.xcconfig; sourceTree = "<group>"; };
+		93CE057B2C956AA4000C28BE /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		93CE057D2C956E46000C28BE /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,10 +179,12 @@
 		93CE05512C92E908000C28BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93CE057D2C956E46000C28BE /* GFAvatarImageView.swift */,
 				93CE055A2C93EB51000C28BE /* GFBodyLabel.swift */,
 				93CE05522C92E92D000C28BE /* GFButton.swift */,
 				93CE05542C92EC36000C28BE /* GFTextField.swift */,
 				93CE05582C93EA2E000C28BE /* GFTitleLabel.swift */,
+				93CE057A2C956A7E000C28BE /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +239,14 @@
 				93CE05792C955D4C000C28BE /* Configurations.xcconfig */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		93CE057A2C956A7E000C28BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				93CE057B2C956AA4000C28BE /* FollowerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +381,7 @@
 			files = (
 				93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */,
 				93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */,
+				93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */,
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
 				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
 				93CE055D2C93EBBA000C28BE /* AlertViewController.swift in Sources */,
@@ -376,6 +391,7 @@
 				93CE05682C941BDD000C28BE /* Follower.swift in Sources */,
 				93CE05592C93EA2E000C28BE /* GFTitleLabel.swift in Sources */,
 				93CE05752C943377000C28BE /* GetFollowers.swift in Sources */,
+				93CE057C2C956AA4000C28BE /* FollowerCell.swift in Sources */,
 				93CE05702C943240000C28BE /* NetworkManager.swift in Sources */,
 				93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
