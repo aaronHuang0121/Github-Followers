@@ -11,6 +11,7 @@ import UIKit
 final class NetworkManager {
     static let shared = NetworkManager()
     private let session: URLSession
+    private let imageCache = NSCache<NSString, UIImage>()
 
     private init() {
         let config = URLSessionConfiguration.default
@@ -101,7 +102,12 @@ final class NetworkManager {
     func downloadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
         guard let url = URL(string: urlString) else { return }
 
-        if let image = getImageFromCache(url) {
+//        if let image = getImageFromCache(url) {
+//            completion(image)
+//            return
+//        }
+        let key = NSString(string: urlString)
+        if let image = getImageFromCache(key) {
             completion(image)
             return
         }
@@ -126,7 +132,7 @@ final class NetworkManager {
                 Rest.logger.error("Download image error: \(RestError.invalidData.localizedDescription)")
                 return
             }
-            
+            self.imageCache.setObject(uiImage, forKey: key)
             completion(uiImage)
         }
         
@@ -141,6 +147,10 @@ final class NetworkManager {
         }
 
         return uiImage
+    }
+
+    private func getImageFromCache(_ key: NSString) -> UIImage? {
+        return imageCache.object(forKey: key)
     }
 }
 
