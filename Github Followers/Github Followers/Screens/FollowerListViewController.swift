@@ -42,30 +42,14 @@ class FollowerListViewController: UIViewController {
     }
 
     private func configureCollectionView() {
-        self.collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createColumnsFlowLayout(columns: 3))
+        self.collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createColumnsFlowLayout(in: view, columns: 3))
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .systemPink
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseId)
     }
 
-    private func createColumnsFlowLayout(columns: Int) -> UICollectionViewLayout {
-        let columns = CGFloat(columns > 0 ? columns : 1)
-        
-        let width = view.bounds.width
-        let padding: CGFloat = 12
-        let minimumItemSpacing: CGFloat = 10
-        let availableWidth: CGFloat = width - (padding * 2) - (minimumItemSpacing * (columns - 1))
-        let itemWidth = availableWidth / columns
-        
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
-        
-        return flowLayout
-    }
-
     private func getFollowers() {
-        NetworkManager.shared.getFollowers(username: username, page: 1) { result in
+        NetworkManager.shared.getFollowers(username: username, page: 1) { [weak self] result in
+            guard let self else { return }
             switch result {
             case .success(let followers):
                 self.followers = followers

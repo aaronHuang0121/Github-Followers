@@ -32,6 +32,7 @@
 		93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */; };
 		93CE057C2C956AA4000C28BE /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE057B2C956AA4000C28BE /* FollowerCell.swift */; };
 		93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE057D2C956E46000C28BE /* GFAvatarImageView.swift */; };
+		93CE05812C95DC82000C28BE /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05802C95DC82000C28BE /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		93CE05792C955D4C000C28BE /* Configurations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configurations.xcconfig; sourceTree = "<group>"; };
 		93CE057B2C956AA4000C28BE /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		93CE057D2C956E46000C28BE /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		93CE05802C95DC82000C28BE /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				93CE05662C941BCC000C28BE /* Models */,
 				93CE054C2C92D9DD000C28BE /* Screens */,
 				93CE056E2C9431FB000C28BE /* Services */,
+				93CE057F2C95DC5C000C28BE /* Utillities */,
 				93CE05512C92E908000C28BE /* Views */,
 			);
 			path = "Github Followers";
@@ -247,6 +250,14 @@
 				93CE057B2C956AA4000C28BE /* FollowerCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		93CE057F2C95DC5C000C28BE /* Utillities */ = {
+			isa = PBXGroup;
+			children = (
+				93CE05802C95DC82000C28BE /* UIHelper.swift */,
+			);
+			path = Utillities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +393,7 @@
 				93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */,
 				93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */,
 				93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */,
+				93CE05812C95DC82000C28BE /* UIHelper.swift in Sources */,
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
 				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
 				93CE055D2C93EBBA000C28BE /* AlertViewController.swift in Sources */,
