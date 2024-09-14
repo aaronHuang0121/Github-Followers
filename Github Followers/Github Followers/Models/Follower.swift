@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Follower: Codable, Identifiable, Equatable {
+struct Follower: Codable, Identifiable, Equatable, Hashable {
     let id: Int
     let nodeId: String
     let login: String
@@ -32,7 +32,7 @@ struct Follower: Codable, Identifiable, Equatable {
 }
 
 extension Follower {
-    enum FollowerType: String, Codable, Equatable {
+    enum FollowerType: String, Codable, Equatable, Hashable {
         case user = "User"
     }
 }
