@@ -26,6 +26,10 @@
 		93CE05682C941BDD000C28BE /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05672C941BDD000C28BE /* Follower.swift */; };
 		93CE056B2C941D78000C28BE /* FollowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE056A2C941D78000C28BE /* FollowerTests.swift */; };
 		93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */; };
+		93CE05702C943240000C28BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE056F2C943240000C28BE /* NetworkManager.swift */; };
+		93CE05722C9432BA000C28BE /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05712C9432BA000C28BE /* RestClient.swift */; };
+		93CE05752C943377000C28BE /* GetFollowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05742C943377000C28BE /* GetFollowers.swift */; };
+		93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,11 @@
 		93CE05672C941BDD000C28BE /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		93CE056A2C941D78000C28BE /* FollowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerTests.swift; sourceTree = "<group>"; };
 		93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+JSONDecoder.swift"; sourceTree = "<group>"; };
+		93CE056F2C943240000C28BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		93CE05712C9432BA000C28BE /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		93CE05742C943377000C28BE /* GetFollowers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFollowers.swift; sourceTree = "<group>"; };
+		93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ToQueryItems.swift"; sourceTree = "<group>"; };
+		93CE05792C955D4C000C28BE /* Configurations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configurations.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +108,7 @@
 		93CE05102C92D479000C28BE = {
 			isa = PBXGroup;
 			children = (
+				93CE05782C955D24000C28BE /* Configs */,
 				93CE051B2C92D479000C28BE /* Github Followers */,
 				93CE05322C92D47B000C28BE /* Github FollowersTests */,
 				93CE053C2C92D47B000C28BE /* Github FollowersUITests */,
@@ -127,6 +137,7 @@
 				93CE05272C92D47B000C28BE /* LaunchScreen.storyboard */,
 				93CE05662C941BCC000C28BE /* Models */,
 				93CE054C2C92D9DD000C28BE /* Screens */,
+				93CE056E2C9431FB000C28BE /* Services */,
 				93CE05512C92E908000C28BE /* Views */,
 			);
 			path = "Github Followers";
@@ -177,6 +188,7 @@
 			children = (
 				93CE05602C93F1D1000C28BE /* UIViewController+Alert.swift */,
 				93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */,
+				93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				93CE05672C941BDD000C28BE /* Follower.swift */,
+				93CE05712C9432BA000C28BE /* RestClient.swift */,
+				93CE05732C943363000C28BE /* Rest */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +209,30 @@
 				93CE056A2C941D78000C28BE /* FollowerTests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		93CE056E2C9431FB000C28BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				93CE056F2C943240000C28BE /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		93CE05732C943363000C28BE /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				93CE05742C943377000C28BE /* GetFollowers.swift */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
+		93CE05782C955D24000C28BE /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				93CE05792C955D4C000C28BE /* Configurations.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,8 +375,12 @@
 				93CE055B2C93EB51000C28BE /* GFBodyLabel.swift in Sources */,
 				93CE05682C941BDD000C28BE /* Follower.swift in Sources */,
 				93CE05592C93EA2E000C28BE /* GFTitleLabel.swift in Sources */,
+				93CE05752C943377000C28BE /* GetFollowers.swift in Sources */,
+				93CE05702C943240000C28BE /* NetworkManager.swift in Sources */,
+				93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
 				93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */,
+				93CE05722C9432BA000C28BE /* RestClient.swift in Sources */,
 				93CE051F2C92D479000C28BE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +432,7 @@
 /* Begin XCBuildConfiguration section */
 		93CE05412C92D47B000C28BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93CE05792C955D4C000C28BE /* Configurations.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -453,6 +496,7 @@
 		};
 		93CE05422C92D47B000C28BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93CE05792C955D4C000C28BE /* Configurations.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
