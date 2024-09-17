@@ -41,6 +41,8 @@ final class NetworkManager {
             component.percentEncodedQueryItems = params.toQueryItems()
         }
         
+        guard let url = component.url else { return .failure(.unableToComplete) }
+        
         Rest.logger.log("\(httpMethod.rawValue): \(url.absoluteString)")
         
         var request = URLRequest(url: url)

@@ -22,11 +22,12 @@ extension RestClient {
     func getFollowers(
         username: String,
         page: Int = 1,
+        perPage: Int = 100,
         completion: @escaping (Result<Rest.GetFollowers.Response, RestError>) -> Void
     ) {
         get(
             endpoint: "/users/\(username)/followers",
-            params: Rest.GetFollowers.Params(perPage: 100, page: page),
+            params: Rest.GetFollowers.Params(perPage: perPage, page: page),
             completion: completion
         )
     }
