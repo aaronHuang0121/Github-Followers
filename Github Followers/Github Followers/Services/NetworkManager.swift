@@ -33,10 +33,6 @@ final class NetworkManager {
         }
         component.path = endpoint
         
-        guard let url = component.url else {
-            return .failure(.invalidURL(Rest.baseURL + endpoint))
-        }
-        
         if let params {
             component.percentEncodedQueryItems = params.toQueryItems()
         }
@@ -166,6 +162,17 @@ extension NetworkManager: RestClient {
             httpMethod: .get,
             endpoint: endpoint,
             params: params,
+            completion: completion
+        )
+    }
+
+    func get<R>(
+        endpoint: String,
+        completion: @escaping (Result<R, RestError>) -> Void) where R : Decodable {
+        request(
+            httpMethod: .get,
+            endpoint: endpoint,
+            params: String?.none,
             completion: completion
         )
     }

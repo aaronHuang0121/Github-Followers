@@ -46,4 +46,9 @@ protocol RestClient {
         params: P?,
         completion: @escaping (Result<R, RestError>) -> Void
     )
+
+    func get<R: Decodable>(
+        endpoint: String,
+        completion: @escaping(Result<R, RestError>) -> Void
+    )
 }

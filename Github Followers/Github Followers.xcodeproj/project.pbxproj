@@ -39,6 +39,7 @@
 		93CE058F2CA2C89A000C28BE /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */; };
 		93CE05912CA2CBB6000C28BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05902CA2CBB6000C28BE /* User.swift */; };
 		93CE05932CA2CDB6000C28BE /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05922CA2CDB6000C28BE /* UserTests.swift */; };
+		93CE05952CA2D614000C28BE /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05942CA2D614000C28BE /* GetUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		93CE05902CA2CBB6000C28BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		93CE05922CA2CDB6000C28BE /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		93CE05942CA2D614000C28BE /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				93CE05742C943377000C28BE /* GetFollowers.swift */,
+				93CE05942CA2D614000C28BE /* GetUser.swift */,
 			);
 			path = Rest;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				93CE05812C95DC82000C28BE /* UIHelper.swift in Sources */,
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
 				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
+				93CE05952CA2D614000C28BE /* GetUser.swift in Sources */,
 				93CE055D2C93EBBA000C28BE /* AlertViewController.swift in Sources */,
 				93CE05612C93F1D1000C28BE /* UIViewController+Alert.swift in Sources */,
 				93CE05572C92F6A0000C28BE /* FollowerListViewController.swift in Sources */,
