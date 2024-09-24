@@ -40,6 +40,8 @@
 		93CE05912CA2CBB6000C28BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05902CA2CBB6000C28BE /* User.swift */; };
 		93CE05932CA2CDB6000C28BE /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05922CA2CDB6000C28BE /* UserTests.swift */; };
 		93CE05952CA2D614000C28BE /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05942CA2D614000C28BE /* GetUser.swift */; };
+		93CE05972CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05962CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift */; };
+		93CE05992CA2E049000C28BE /* GFUserInfoHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05982CA2E049000C28BE /* GFUserInfoHeaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		93CE05902CA2CBB6000C28BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		93CE05922CA2CDB6000C28BE /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		93CE05942CA2D614000C28BE /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
+		93CE05962CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		93CE05982CA2E049000C28BE /* GFUserInfoHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +193,7 @@
 				93CE054F2C92DA4A000C28BE /* FavoritesListViewController.swift */,
 				93CE05562C92F6A0000C28BE /* FollowerListViewController.swift */,
 				93CE054D2C92DA18000C28BE /* SearchViewController.swift */,
-				93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */,
+				93CE059A2CA2E052000C28BE /* User info */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -285,6 +289,7 @@
 			children = (
 				93CE055A2C93EB51000C28BE /* GFBodyLabel.swift */,
 				93CE05582C93EA2E000C28BE /* GFTitleLabel.swift */,
+				93CE05962CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -311,6 +316,15 @@
 				93CE05522C92E92D000C28BE /* GFButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		93CE059A2CA2E052000C28BE /* User info */ = {
+			isa = PBXGroup;
+			children = (
+				93CE05982CA2E049000C28BE /* GFUserInfoHeaderViewController.swift */,
+				93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */,
+			);
+			path = "User info";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +472,7 @@
 				93CE05572C92F6A0000C28BE /* FollowerListViewController.swift in Sources */,
 				93CE055B2C93EB51000C28BE /* GFBodyLabel.swift in Sources */,
 				93CE05682C941BDD000C28BE /* Follower.swift in Sources */,
+				93CE05992CA2E049000C28BE /* GFUserInfoHeaderViewController.swift in Sources */,
 				93CE05592C93EA2E000C28BE /* GFTitleLabel.swift in Sources */,
 				93CE05752C943377000C28BE /* GetFollowers.swift in Sources */,
 				93CE057C2C956AA4000C28BE /* FollowerCell.swift in Sources */,
@@ -465,6 +480,7 @@
 				93CE058B2CA2BA16000C28BE /* GFEmptyStateView.swift in Sources */,
 				93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
+				93CE05972CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift in Sources */,
 				93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */,
 				93CE05832C9DD04F000C28BE /* LoadingFooter.swift in Sources */,
 				93CE05722C9432BA000C28BE /* RestClient.swift in Sources */,
