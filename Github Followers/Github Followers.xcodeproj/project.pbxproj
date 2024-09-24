@@ -33,6 +33,7 @@
 		93CE057C2C956AA4000C28BE /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE057B2C956AA4000C28BE /* FollowerCell.swift */; };
 		93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE057D2C956E46000C28BE /* GFAvatarImageView.swift */; };
 		93CE05812C95DC82000C28BE /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05802C95DC82000C28BE /* UIHelper.swift */; };
+		93CE05832C9DD04F000C28BE /* LoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05822C9DD04E000C28BE /* LoadingFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		93CE057B2C956AA4000C28BE /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		93CE057D2C956E46000C28BE /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		93CE05802C95DC82000C28BE /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		93CE05822C9DD04E000C28BE /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				93CE05522C92E92D000C28BE /* GFButton.swift */,
 				93CE05542C92EC36000C28BE /* GFTextField.swift */,
 				93CE05582C93EA2E000C28BE /* GFTitleLabel.swift */,
+				93CE05822C9DD04E000C28BE /* LoadingFooter.swift */,
 				93CE057A2C956A7E000C28BE /* Cells */,
 			);
 			path = Views;
@@ -408,6 +411,7 @@
 				93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
 				93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */,
+				93CE05832C9DD04F000C28BE /* LoadingFooter.swift in Sources */,
 				93CE05722C9432BA000C28BE /* RestClient.swift in Sources */,
 				93CE051F2C92D479000C28BE /* SceneDelegate.swift in Sources */,
 			);
