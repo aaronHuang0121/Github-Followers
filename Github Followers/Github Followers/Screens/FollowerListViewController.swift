@@ -9,17 +9,25 @@ import UIKit
 
 class FollowerListViewController: UIViewController {
     var username: String!
-    var followers: [Follower] = []
+    var fetchedFollowers: [Follower] = []
+    var filteredFollowers: [Follower] = []
     var page: Int = 1
     var hasMoreFollowers: Bool = true
     var isLoading: Bool = true
+    var isSearching: Bool = false
     private let perPage: Int = 20
+
+    private var followers: [Follower] {
+        isSearching ? filteredFollowers : fetchedFollowers
+    }
     
     var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
+        configureCollectionView()
+        configureSearchController()
         getFollowers(username: username, page: page)
     }
 
@@ -39,8 +47,6 @@ class FollowerListViewController: UIViewController {
     private func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        configureCollectionView()
     }
     
     private func configureCollectionView() {
@@ -58,6 +64,15 @@ class FollowerListViewController: UIViewController {
         self.collectionView.dataSource = self
         view.addSubview(collectionView)
     }
+
+    private func configureSearchController() {
+        let searchController = UISearchController()
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search for an username"
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+    }
     
     private func getFollowers(username: String, page: Int) {
         isLoading = true
@@ -69,8 +84,8 @@ class FollowerListViewController: UIViewController {
             switch result {
             case .success(let followers):
                 if followers.count < self.perPage { self.hasMoreFollowers = false }
-                self.followers.append(contentsOf: followers)
-                if self.followers.isEmpty {
+                self.fetchedFollowers.append(contentsOf: followers)
+                if self.fetchedFollowers.isEmpty {
                     DispatchQueue.main.async { [weak self] in
                         guard let self else { return }
                         self.showEmptyState(with: "This user doesn't have any followers.", in: self.view)
@@ -118,16 +133,39 @@ extension FollowerListViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        guard hasMoreFollowers else { return }
+        guard hasMoreFollowers, !isLoading, !isSearching else { return }
         
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.height
         
-        if offsetY > contentHeight - height, !isLoading {
+        if offsetY > contentHeight - height {
             page += 1
             getFollowers(username: username, page: page)
         }
+    }
+}
+
+extension FollowerListViewController: UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else {
+            isSearching = false
+            collectionView.reloadData()
+            return
+        }
+
+        isSearching = true
+        
+        filteredFollowers = fetchedFollowers.filter({ follower in
+            follower.login.lowercased().contains(filter.lowercased())
+        })
+
+        collectionView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
+        collectionView.reloadData()
     }
 }
 
