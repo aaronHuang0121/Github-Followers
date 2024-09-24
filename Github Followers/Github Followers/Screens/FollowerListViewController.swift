@@ -144,6 +144,13 @@ extension FollowerListViewController: UICollectionViewDelegate, UICollectionView
             getFollowers(username: username, page: page)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let follower = followers[indexPath.item]
+        let userInfoViewController = UserInfoViewController()
+        let navController = UINavigationController(rootViewController: userInfoViewController)
+        present(navController, animated: true)
+    }
 }
 
 extension FollowerListViewController: UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating {

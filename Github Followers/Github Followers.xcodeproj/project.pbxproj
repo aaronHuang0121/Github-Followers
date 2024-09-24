@@ -36,6 +36,7 @@
 		93CE05832C9DD04F000C28BE /* LoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05822C9DD04E000C28BE /* LoadingFooter.swift */; };
 		93CE058B2CA2BA16000C28BE /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE058A2CA2BA16000C28BE /* GFEmptyStateView.swift */; };
 		93CE058D2CA2BD0D000C28BE /* UIViewController+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE058C2CA2BD0D000C28BE /* UIViewController+EmptyState.swift */; };
+		93CE058F2CA2C89A000C28BE /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		93CE05822C9DD04E000C28BE /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
 		93CE058A2CA2BA16000C28BE /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		93CE058C2CA2BD0D000C28BE /* UIViewController+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EmptyState.swift"; sourceTree = "<group>"; };
+		93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +179,11 @@
 		93CE054C2C92D9DD000C28BE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				93CE055C2C93EBBA000C28BE /* AlertViewController.swift */,
 				93CE054F2C92DA4A000C28BE /* FavoritesListViewController.swift */,
 				93CE05562C92F6A0000C28BE /* FollowerListViewController.swift */,
 				93CE054D2C92DA18000C28BE /* SearchViewController.swift */,
-				93CE055C2C93EBBA000C28BE /* AlertViewController.swift */,
+				93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */,
+				93CE058F2CA2C89A000C28BE /* UserInfoViewController.swift in Sources */,
 				93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */,
 				93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */,
 				93CE058D2CA2BD0D000C28BE /* UIViewController+EmptyState.swift in Sources */,
