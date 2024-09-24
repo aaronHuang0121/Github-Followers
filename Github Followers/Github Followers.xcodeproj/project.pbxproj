@@ -37,6 +37,8 @@
 		93CE058B2CA2BA16000C28BE /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE058A2CA2BA16000C28BE /* GFEmptyStateView.swift */; };
 		93CE058D2CA2BD0D000C28BE /* UIViewController+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE058C2CA2BD0D000C28BE /* UIViewController+EmptyState.swift */; };
 		93CE058F2CA2C89A000C28BE /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */; };
+		93CE05912CA2CBB6000C28BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05902CA2CBB6000C28BE /* User.swift */; };
+		93CE05932CA2CDB6000C28BE /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05922CA2CDB6000C28BE /* UserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		93CE058A2CA2BA16000C28BE /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		93CE058C2CA2BD0D000C28BE /* UIViewController+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EmptyState.swift"; sourceTree = "<group>"; };
 		93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		93CE05902CA2CBB6000C28BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		93CE05922CA2CDB6000C28BE /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 			children = (
 				93CE05672C941BDD000C28BE /* Follower.swift */,
 				93CE05712C9432BA000C28BE /* RestClient.swift */,
+				93CE05902CA2CBB6000C28BE /* User.swift */,
 				93CE05732C943363000C28BE /* Rest */,
 			);
 			path = Models;
@@ -227,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				93CE056A2C941D78000C28BE /* FollowerTests.swift */,
+				93CE05922CA2CDB6000C28BE /* UserTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -437,6 +443,7 @@
 				93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */,
 				93CE058F2CA2C89A000C28BE /* UserInfoViewController.swift in Sources */,
 				93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */,
+				93CE05912CA2CBB6000C28BE /* User.swift in Sources */,
 				93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */,
 				93CE058D2CA2BD0D000C28BE /* UIViewController+EmptyState.swift in Sources */,
 				93CE05812C95DC82000C28BE /* UIHelper.swift in Sources */,
@@ -465,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CE05932CA2CDB6000C28BE /* UserTests.swift in Sources */,
 				93CE05342C92D47B000C28BE /* Github_FollowersTests.swift in Sources */,
 				93CE056B2C941D78000C28BE /* FollowerTests.swift in Sources */,
 			);
