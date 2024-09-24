@@ -70,6 +70,12 @@ class FollowerListViewController: UIViewController {
             case .success(let followers):
                 if followers.count < self.perPage { self.hasMoreFollowers = false }
                 self.followers.append(contentsOf: followers)
+                if self.followers.isEmpty {
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self else { return }
+                        self.showEmptyState(with: "This user doesn't have any followers.", in: self.view)
+                    }
+                }
             case .failure(let error):
                 self.alert(
                     title: "Bad stuff happened",
