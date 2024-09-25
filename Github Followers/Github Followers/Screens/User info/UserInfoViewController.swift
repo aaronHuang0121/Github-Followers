@@ -11,8 +11,9 @@ class UserInfoViewController: UIViewController {
     var username: String!
 
     let headerView = UIView()
-    let itemViewOne = UIView()
-    let itemViewTwo = UIView()
+    let firstItemView = UIView()
+    let secondItemView = UIView()
+    let dateLabel = GFBodyLabel(textAlignment: .center)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,9 @@ class UserInfoViewController: UIViewController {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.add(childVC: GFUserInfoHeaderViewController(user: user), to: self.headerView)
+                    self.add(childVC: GFRepoItemViewController(user: user), to: self.firstItemView)
+                    self.add(childVC: GFFollowerItemViewController(user: user), to: self.secondItemView)
+                    self.dateLabel.text = "Github since \(user.createdAt.formatted())"
                 }
             case .failure(let error):
                 self.alert(title: "Something went wrong.", message: error.localizedDescription)
@@ -48,7 +52,7 @@ class UserInfoViewController: UIViewController {
     func layoutUI() {
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
-        let subViews = [headerView, itemViewOne, itemViewTwo]
+        let subViews = [headerView, firstItemView, secondItemView, dateLabel]
         for subView in subViews {
             view.addSubview(subView)
             subView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,19 +62,19 @@ class UserInfoViewController: UIViewController {
                 subView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             ])
         }
-        
-        itemViewOne.backgroundColor = .systemRed
-        itemViewTwo.backgroundColor = .systemBlue
 
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerView.heightAnchor.constraint(equalToConstant: 180),
             
-            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
-            itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
+            firstItemView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
+            firstItemView.heightAnchor.constraint(equalToConstant: itemHeight),
             
-            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
-            itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight)
+            secondItemView.topAnchor.constraint(equalTo: firstItemView.bottomAnchor, constant: padding),
+            secondItemView.heightAnchor.constraint(equalToConstant: itemHeight),
+
+            dateLabel.topAnchor.constraint(equalTo: secondItemView.bottomAnchor, constant: padding),
+            dateLabel.heightAnchor.constraint(equalToConstant: 18)
         ])
     }
 

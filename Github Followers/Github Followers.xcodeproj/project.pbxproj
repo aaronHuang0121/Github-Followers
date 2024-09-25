@@ -43,6 +43,10 @@
 		93CE05972CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05962CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift */; };
 		93CE05992CA2E049000C28BE /* GFUserInfoHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05982CA2E049000C28BE /* GFUserInfoHeaderViewController.swift */; };
 		93CE059C2CA3BF9C000C28BE /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE059B2CA3BF9C000C28BE /* GFItemInfoView.swift */; };
+		93CE059E2CA3C4A5000C28BE /* GFItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE059D2CA3C4A5000C28BE /* GFItemInfoViewController.swift */; };
+		93CE05A02CA3C740000C28BE /* GFRepoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE059F2CA3C740000C28BE /* GFRepoItemViewController.swift */; };
+		93CE05A22CA3C7F9000C28BE /* GFFollowerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05A12CA3C7F9000C28BE /* GFFollowerItemViewController.swift */; };
+		93CE05A42CA3E61D000C28BE /* Date+Formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05A32CA3E61D000C28BE /* Date+Formatted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,10 @@
 		93CE05962CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		93CE05982CA2E049000C28BE /* GFUserInfoHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderViewController.swift; sourceTree = "<group>"; };
 		93CE059B2CA3BF9C000C28BE /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
+		93CE059D2CA3C4A5000C28BE /* GFItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoViewController.swift; sourceTree = "<group>"; };
+		93CE059F2CA3C740000C28BE /* GFRepoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemViewController.swift; sourceTree = "<group>"; };
+		93CE05A12CA3C7F9000C28BE /* GFFollowerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemViewController.swift; sourceTree = "<group>"; };
+		93CE05A32CA3E61D000C28BE /* Date+Formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatted.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,7 @@
 				93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */,
 				93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */,
 				93CE058C2CA2BD0D000C28BE /* UIViewController+EmptyState.swift */,
+				93CE05A32CA3E61D000C28BE /* Date+Formatted.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +333,9 @@
 		93CE059A2CA2E052000C28BE /* User info */ = {
 			isa = PBXGroup;
 			children = (
+				93CE05A12CA3C7F9000C28BE /* GFFollowerItemViewController.swift */,
+				93CE059D2CA3C4A5000C28BE /* GFItemInfoViewController.swift */,
+				93CE059F2CA3C740000C28BE /* GFRepoItemViewController.swift */,
 				93CE05982CA2E049000C28BE /* GFUserInfoHeaderViewController.swift */,
 				93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */,
 			);
@@ -466,9 +478,11 @@
 				93CE05912CA2CBB6000C28BE /* User.swift in Sources */,
 				93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */,
 				93CE058D2CA2BD0D000C28BE /* UIViewController+EmptyState.swift in Sources */,
+				93CE059E2CA3C4A5000C28BE /* GFItemInfoViewController.swift in Sources */,
 				93CE05812C95DC82000C28BE /* UIHelper.swift in Sources */,
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
 				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
+				93CE05A22CA3C7F9000C28BE /* GFFollowerItemViewController.swift in Sources */,
 				93CE05952CA2D614000C28BE /* GetUser.swift in Sources */,
 				93CE055D2C93EBBA000C28BE /* AlertViewController.swift in Sources */,
 				93CE05612C93F1D1000C28BE /* UIViewController+Alert.swift in Sources */,
@@ -487,8 +501,10 @@
 				93CE05972CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift in Sources */,
 				93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */,
 				93CE05832C9DD04F000C28BE /* LoadingFooter.swift in Sources */,
+				93CE05A42CA3E61D000C28BE /* Date+Formatted.swift in Sources */,
 				93CE05722C9432BA000C28BE /* RestClient.swift in Sources */,
 				93CE051F2C92D479000C28BE /* SceneDelegate.swift in Sources */,
+				93CE05A02CA3C740000C28BE /* GFRepoItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
