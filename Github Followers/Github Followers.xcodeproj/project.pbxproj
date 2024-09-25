@@ -42,6 +42,7 @@
 		93CE05952CA2D614000C28BE /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05942CA2D614000C28BE /* GetUser.swift */; };
 		93CE05972CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05962CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift */; };
 		93CE05992CA2E049000C28BE /* GFUserInfoHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05982CA2E049000C28BE /* GFUserInfoHeaderViewController.swift */; };
+		93CE059C2CA3BF9C000C28BE /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE059B2CA3BF9C000C28BE /* GFItemInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		93CE05942CA2D614000C28BE /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
 		93CE05962CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		93CE05982CA2E049000C28BE /* GFUserInfoHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderViewController.swift; sourceTree = "<group>"; };
+		93CE059B2CA3BF9C000C28BE /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				93CE058A2CA2BA16000C28BE /* GFEmptyStateView.swift */,
+				93CE059B2CA3BF9C000C28BE /* GFItemInfoView.swift */,
 				93CE05822C9DD04E000C28BE /* LoadingFooter.swift */,
 				93CE05892CA2B8F5000C28BE /* Buttons */,
 				93CE057A2C956A7E000C28BE /* Cells */,
@@ -477,6 +480,7 @@
 				93CE05752C943377000C28BE /* GetFollowers.swift in Sources */,
 				93CE057C2C956AA4000C28BE /* FollowerCell.swift in Sources */,
 				93CE05702C943240000C28BE /* NetworkManager.swift in Sources */,
+				93CE059C2CA3BF9C000C28BE /* GFItemInfoView.swift in Sources */,
 				93CE058B2CA2BA16000C28BE /* GFEmptyStateView.swift in Sources */,
 				93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
