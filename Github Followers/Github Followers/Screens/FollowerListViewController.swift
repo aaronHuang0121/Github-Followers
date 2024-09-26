@@ -13,6 +13,7 @@ protocol FollowerListVCDelegate: AnyObject {
 
 class FollowerListViewController: UIViewController {
     var username: String!
+    var user: User?
     var fetchedFollowers: [Follower] = []
     var filteredFollowers: [Follower] = []
     var page: Int = 1
@@ -51,6 +52,27 @@ class FollowerListViewController: UIViewController {
     private func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+
+        configureAddNavigationRightItem()
+    }
+
+    private func configureAddNavigationRightItem() {
+        let contained = FavoriteFollowersService.shared.contains(with: username)
+        let addButton = UIBarButtonItem(barButtonSystemItem: contained ? .trash : .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
+    }
+
+    private func configureLoadingNavigationRightItem() {
+        let indicator = UIActivityIndicatorView(frame: .init(x: 0, y: 0, width: 20, height: 20))
+        let loadingButton = UIBarButtonItem(customView: indicator)
+        navigationItem.rightBarButtonItem = loadingButton
+        indicator.startAnimating()
+    }
+
+    private func configureSuccessNavigationRightItem() {
+        let success = UIImageView(image: UIImage(systemName: "checkmark.circle"))
+        success.tintColor = .systemGreen
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: success)
     }
     
     private func configureCollectionView() {
@@ -90,8 +112,7 @@ class FollowerListViewController: UIViewController {
                 if followers.count < self.perPage { self.hasMoreFollowers = false }
                 self.fetchedFollowers.append(contentsOf: followers)
                 if self.fetchedFollowers.isEmpty {
-                    DispatchQueue.main.async { [weak self] in
-                        guard let self else { return }
+                    DispatchQueue.main.async {
                         self.showEmptyState(with: "This user doesn't have any followers.", in: self.view)
                     }
                 }
@@ -103,6 +124,57 @@ class FollowerListViewController: UIViewController {
             }
             DispatchQueue.main.async { [weak self] in
                 self?.collectionView.reloadData()
+            }
+        }
+    }
+
+    @objc func addButtonTapped() {
+        configureLoadingNavigationRightItem()
+        let group = DispatchGroup()
+        if user?.login != username {
+            group.enter()
+            NetworkManager.shared.getUser(username: username) { [weak self] result in
+                guard let self else { return }
+
+                switch result {
+                case .success(let user):
+                    self.user = user
+                    self.username = user.login
+                case .failure(let error):
+                    self.alert(title: "Something went wrong.", message: error.localizedDescription)
+                    self.configureAddNavigationRightItem()
+                }
+                group.leave()
+            }
+        }
+
+        group.notify(queue: .main) { [weak self] in
+            guard let self else { return }
+
+            guard let user = self.user else {
+                self.alert(title: "Something went wrong.", message: "There are missing user. Please try again.")
+                return
+            }
+            
+            FavoriteFollowersService.shared.updateFavorite(user) { [weak self] result in
+                guard let self else { return }
+
+                switch result {
+                case .success:
+                    DispatchQueue.main.async { self.updateFavoriteSuccess() }
+                case .failure(let error):
+                    self.alert(title: "Something went wrong.", message: error.localizedDescription)
+                    self.configureAddNavigationRightItem()
+                }
+            }
+        }
+    }
+
+    private func updateFavoriteSuccess() {
+        UIView.animate(options: .curveEaseInOut) {
+            self.configureSuccessNavigationRightItem()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.configureAddNavigationRightItem()
             }
         }
     }

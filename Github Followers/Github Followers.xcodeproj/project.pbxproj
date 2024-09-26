@@ -48,6 +48,8 @@
 		93CE05A22CA3C7F9000C28BE /* GFFollowerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05A12CA3C7F9000C28BE /* GFFollowerItemViewController.swift */; };
 		93CE05A42CA3E61D000C28BE /* Date+Formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05A32CA3E61D000C28BE /* Date+Formatted.swift */; };
 		93CE05A62CA3ECF8000C28BE /* UIViewController+SafariVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05A52CA3ECF8000C28BE /* UIViewController+SafariVC.swift */; };
+		93CE05AA2CA5430D000C28BE /* FavoriteContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05A82CA5430D000C28BE /* FavoriteContainer.xcdatamodeld */; };
+		93CE05AC2CA5438C000C28BE /* FavoriteFollowersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05AB2CA5438C000C28BE /* FavoriteFollowersService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		93CE05A12CA3C7F9000C28BE /* GFFollowerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemViewController.swift; sourceTree = "<group>"; };
 		93CE05A32CA3E61D000C28BE /* Date+Formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatted.swift"; sourceTree = "<group>"; };
 		93CE05A52CA3ECF8000C28BE /* UIViewController+SafariVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafariVC.swift"; sourceTree = "<group>"; };
+		93CE05A92CA5430D000C28BE /* FavoriteContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteContainer.xcdatamodel; sourceTree = "<group>"; };
+		93CE05AB2CA5438C000C28BE /* FavoriteFollowersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFollowersService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,7 @@
 				93CE05672C941BDD000C28BE /* Follower.swift */,
 				93CE05712C9432BA000C28BE /* RestClient.swift */,
 				93CE05902CA2CBB6000C28BE /* User.swift */,
+				93CE05A72CA54282000C28BE /* Persistances */,
 				93CE05732C943363000C28BE /* Rest */,
 			);
 			path = Models;
@@ -261,6 +266,7 @@
 		93CE056E2C9431FB000C28BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				93CE05AB2CA5438C000C28BE /* FavoriteFollowersService.swift */,
 				93CE056F2C943240000C28BE /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -343,6 +349,14 @@
 				93CE058E2CA2C89A000C28BE /* UserInfoViewController.swift */,
 			);
 			path = "User info";
+			sourceTree = "<group>";
+		};
+		93CE05A72CA54282000C28BE /* Persistances */ = {
+			isa = PBXGroup;
+			children = (
+				93CE05A82CA5430D000C28BE /* FavoriteContainer.xcdatamodeld */,
+			);
+			path = Persistances;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +504,7 @@
 				93CE055D2C93EBBA000C28BE /* AlertViewController.swift in Sources */,
 				93CE05612C93F1D1000C28BE /* UIViewController+Alert.swift in Sources */,
 				93CE05572C92F6A0000C28BE /* FollowerListViewController.swift in Sources */,
+				93CE05AC2CA5438C000C28BE /* FavoriteFollowersService.swift in Sources */,
 				93CE055B2C93EB51000C28BE /* GFBodyLabel.swift in Sources */,
 				93CE05682C941BDD000C28BE /* Follower.swift in Sources */,
 				93CE05992CA2E049000C28BE /* GFUserInfoHeaderViewController.swift in Sources */,
@@ -500,6 +515,7 @@
 				93CE05702C943240000C28BE /* NetworkManager.swift in Sources */,
 				93CE059C2CA3BF9C000C28BE /* GFItemInfoView.swift in Sources */,
 				93CE058B2CA2BA16000C28BE /* GFEmptyStateView.swift in Sources */,
+				93CE05AA2CA5430D000C28BE /* FavoriteContainer.xcdatamodeld in Sources */,
 				93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
 				93CE05972CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift in Sources */,
@@ -861,6 +877,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93CE05A82CA5430D000C28BE /* FavoriteContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93CE05A92CA5430D000C28BE /* FavoriteContainer.xcdatamodel */,
+			);
+			currentVersion = 93CE05A92CA5430D000C28BE /* FavoriteContainer.xcdatamodel */;
+			name = FavoriteContainer.xcdatamodeld;
+			path = "/Users/aaron/Documents/Projects/Tutorial/Github-Followers/Github Followers/Github Followers/Models/Persistances/FavoriteContainer.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 93CE05112C92D479000C28BE /* Project object */;
 }
