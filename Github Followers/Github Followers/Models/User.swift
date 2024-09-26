@@ -44,6 +44,12 @@ struct User: Codable, Identifiable, Equatable, Hashable {
 }
 
 extension User {
+    func toFavorite() -> Favorite {
+        return Favorite(login: login, avatarImage: avatarUrl)
+    }
+}
+
+extension User {
     static let mock = User(
         login: "octocat",
         id: 1,

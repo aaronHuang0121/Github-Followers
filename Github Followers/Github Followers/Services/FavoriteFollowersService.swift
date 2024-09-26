@@ -47,7 +47,7 @@ final class FavoriteFollowersService {
         }
     }
 
-    func updateFavorite(_ user: User, completion: (Result<[FavoriteEntity], FavoriteError>) -> Void) {
+    func updateFavorite(_ user: Favorite, completion: (Result<[FavoriteEntity], FavoriteError>) -> Void) {
         getFavorites { result in
             switch result {
             case .success(let favorites):
@@ -81,7 +81,7 @@ final class FavoriteFollowersService {
 }
 
 extension FavoriteFollowersService {
-    private func getFavorites(completion: (Result<[FavoriteEntity], FavoriteError>) -> Void) {
+    func getFavorites(completion: (Result<[FavoriteEntity], FavoriteError>) -> Void) {
         let request = NSFetchRequest<FavoriteEntity>(entityName: self.entityName)
         
         do {
@@ -93,10 +93,10 @@ extension FavoriteFollowersService {
         }
     }
 
-    private func add(_ user: User, completion: (Result<[FavoriteEntity], FavoriteError>) -> Void) {
+    private func add(_ user: Favorite, completion: (Result<[FavoriteEntity], FavoriteError>) -> Void) {
         let entity = FavoriteEntity(context: container.viewContext)
         entity.login = user.login
-        entity.avatarUrl = user.avatarUrl
+        entity.avatarUrl = user.avatarImage
         
         applyChanges(completion: completion)
     }

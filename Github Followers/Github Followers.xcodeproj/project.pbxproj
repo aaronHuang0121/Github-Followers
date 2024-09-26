@@ -50,6 +50,8 @@
 		93CE05A62CA3ECF8000C28BE /* UIViewController+SafariVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05A52CA3ECF8000C28BE /* UIViewController+SafariVC.swift */; };
 		93CE05AA2CA5430D000C28BE /* FavoriteContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05A82CA5430D000C28BE /* FavoriteContainer.xcdatamodeld */; };
 		93CE05AC2CA5438C000C28BE /* FavoriteFollowersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05AB2CA5438C000C28BE /* FavoriteFollowersService.swift */; };
+		93CE05AE2CA55E36000C28BE /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05AD2CA55E36000C28BE /* FavoriteCell.swift */; };
+		93CE05B02CA56704000C28BE /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05AF2CA56704000C28BE /* Favorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		93CE05A52CA3ECF8000C28BE /* UIViewController+SafariVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafariVC.swift"; sourceTree = "<group>"; };
 		93CE05A92CA5430D000C28BE /* FavoriteContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteContainer.xcdatamodel; sourceTree = "<group>"; };
 		93CE05AB2CA5438C000C28BE /* FavoriteFollowersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFollowersService.swift; sourceTree = "<group>"; };
+		93CE05AD2CA55E36000C28BE /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		93CE05AF2CA56704000C28BE /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,7 @@
 				93CE05902CA2CBB6000C28BE /* User.swift */,
 				93CE05A72CA54282000C28BE /* Persistances */,
 				93CE05732C943363000C28BE /* Rest */,
+				93CE05AF2CA56704000C28BE /* Favorite.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 		93CE057A2C956A7E000C28BE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				93CE05AD2CA55E36000C28BE /* FavoriteCell.swift */,
 				93CE057B2C956AA4000C28BE /* FollowerCell.swift */,
 			);
 			path = Cells;
@@ -500,6 +506,7 @@
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
 				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
 				93CE05A22CA3C7F9000C28BE /* GFFollowerItemViewController.swift in Sources */,
+				93CE05B02CA56704000C28BE /* Favorite.swift in Sources */,
 				93CE05952CA2D614000C28BE /* GetUser.swift in Sources */,
 				93CE055D2C93EBBA000C28BE /* AlertViewController.swift in Sources */,
 				93CE05612C93F1D1000C28BE /* UIViewController+Alert.swift in Sources */,
@@ -520,6 +527,7 @@
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
 				93CE05972CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift in Sources */,
 				93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */,
+				93CE05AE2CA55E36000C28BE /* FavoriteCell.swift in Sources */,
 				93CE05832C9DD04F000C28BE /* LoadingFooter.swift in Sources */,
 				93CE05A42CA3E61D000C28BE /* Date+Formatted.swift in Sources */,
 				93CE05722C9432BA000C28BE /* RestClient.swift in Sources */,

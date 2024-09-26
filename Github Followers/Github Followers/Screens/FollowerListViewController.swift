@@ -13,7 +13,8 @@ protocol FollowerListVCDelegate: AnyObject {
 
 class FollowerListViewController: UIViewController {
     var username: String!
-    var user: User?
+
+    private(set) var user: User?
     var fetchedFollowers: [Follower] = []
     var filteredFollowers: [Follower] = []
     var page: Int = 1
@@ -151,7 +152,7 @@ class FollowerListViewController: UIViewController {
         group.notify(queue: .main) { [weak self] in
             guard let self else { return }
 
-            guard let user = self.user else {
+            guard let user = self.user?.toFavorite() else {
                 self.alert(title: "Something went wrong.", message: "There are missing user. Please try again.")
                 return
             }
