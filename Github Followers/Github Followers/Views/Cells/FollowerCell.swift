@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class FollowerCell: UICollectionViewCell {
     static let reuseId = "FollowerCell"
@@ -57,7 +58,9 @@ class FollowerCell: UICollectionViewCell {
 }
 
 #Preview {
-    let cell = FollowerCell()
-    cell.set(follower: .mock)
-    return cell
+    PreviewContainer {
+        let cell = FollowerCell()
+        cell.set(follower: .mock)
+        return cell
+    }
 }

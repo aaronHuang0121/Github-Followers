@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class FavoriteCell: UITableViewCell {
 
@@ -47,4 +48,12 @@ class FavoriteCell: UITableViewCell {
         avatarImageView.downloadImage(from: avatarImage)
     }
 
+}
+
+#Preview {
+    PreviewContainer {
+        let cell = FavoriteCell()
+        cell.set(login: "Aaron Huang", avatarImage: "")
+        return cell
+    }
 }

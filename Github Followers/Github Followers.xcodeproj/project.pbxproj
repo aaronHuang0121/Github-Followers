@@ -52,6 +52,7 @@
 		93CE05AC2CA5438C000C28BE /* FavoriteFollowersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05AB2CA5438C000C28BE /* FavoriteFollowersService.swift */; };
 		93CE05AE2CA55E36000C28BE /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05AD2CA55E36000C28BE /* FavoriteCell.swift */; };
 		93CE05B02CA56704000C28BE /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05AF2CA56704000C28BE /* Favorite.swift */; };
+		93CE05B22CA6994B000C28BE /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B12CA6994B000C28BE /* PreviewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		93CE05AB2CA5438C000C28BE /* FavoriteFollowersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFollowersService.swift; sourceTree = "<group>"; };
 		93CE05AD2CA55E36000C28BE /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		93CE05AF2CA56704000C28BE /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		93CE05B12CA6994B000C28BE /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				93CE05802C95DC82000C28BE /* UIHelper.swift */,
+				93CE05B12CA6994B000C28BE /* PreviewContainer.swift */,
 			);
 			path = Utillities;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				93CE05572C92F6A0000C28BE /* FollowerListViewController.swift in Sources */,
 				93CE05AC2CA5438C000C28BE /* FavoriteFollowersService.swift in Sources */,
 				93CE055B2C93EB51000C28BE /* GFBodyLabel.swift in Sources */,
+				93CE05B22CA6994B000C28BE /* PreviewContainer.swift in Sources */,
 				93CE05682C941BDD000C28BE /* Follower.swift in Sources */,
 				93CE05992CA2E049000C28BE /* GFUserInfoHeaderViewController.swift in Sources */,
 				93CE05592C93EA2E000C28BE /* GFTitleLabel.swift in Sources */,
