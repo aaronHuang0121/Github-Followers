@@ -105,7 +105,6 @@ class FollowerListViewController: UIViewController {
     private func configureSearchController() {
         let searchController = UISearchController()
         searchController.searchResultsUpdater = self
-        searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = "Search for an username"
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
@@ -209,7 +208,11 @@ extension FollowerListViewController: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionFooter {
-            return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LoadingFooter.reuseId, for: indexPath)
+            return collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionFooter,
+                withReuseIdentifier: LoadingFooter.reuseId,
+                for: indexPath
+            )
         }
 
         return UICollectionReusableView()
@@ -242,7 +245,7 @@ extension FollowerListViewController: UICollectionViewDelegate, UICollectionView
     }
 }
 
-extension FollowerListViewController: UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating {
+extension FollowerListViewController: UISearchControllerDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else {
             isSearching = false
@@ -258,11 +261,6 @@ extension FollowerListViewController: UISearchBarDelegate, UISearchControllerDel
 
         collectionView.reloadData()
     }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        isSearching = false
-        collectionView.reloadData()
-    }
 }
 
 extension FollowerListViewController: FollowerListVCDelegate {
@@ -273,7 +271,7 @@ extension FollowerListViewController: FollowerListVCDelegate {
         filteredFollowers.removeAll()
         page = 1
 
-        collectionView.setContentOffset(.zero, animated: true)
+        collectionView.scrollToItem(at: .init(item: 0, section: 0), at: .top, animated: true)
         getFollowers(username: username, page: 1)
     }
 }
