@@ -55,6 +55,7 @@
 		93CE05B22CA6994B000C28BE /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B12CA6994B000C28BE /* PreviewContainer.swift */; };
 		93CE05B52CA69FE4000C28BE /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B42CA69FE4000C28BE /* GFTabBarController.swift */; };
 		93CE05B92CABCA81000C28BE /* UIWindow+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */; };
+		93CE05BB2CABCEFC000C28BE /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05BA2CABCEFC000C28BE /* GFAlertContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		93CE05B12CA6994B000C28BE /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		93CE05B42CA69FE4000C28BE /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Current.swift"; sourceTree = "<group>"; };
+		93CE05BA2CABCEFC000C28BE /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 		93CE05512C92E908000C28BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93CE05BA2CABCEFC000C28BE /* GFAlertContainerView.swift */,
 				93CE058A2CA2BA16000C28BE /* GFEmptyStateView.swift */,
 				93CE059B2CA3BF9C000C28BE /* GFItemInfoView.swift */,
 				93CE05822C9DD04E000C28BE /* LoadingFooter.swift */,
@@ -512,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CE05BB2CABCEFC000C28BE /* GFAlertContainerView.swift in Sources */,
 				93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */,
 				93CE058F2CA2C89A000C28BE /* UserInfoViewController.swift in Sources */,
 				93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */,
