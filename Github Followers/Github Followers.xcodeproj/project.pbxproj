@@ -54,6 +54,7 @@
 		93CE05B02CA56704000C28BE /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05AF2CA56704000C28BE /* Favorite.swift */; };
 		93CE05B22CA6994B000C28BE /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B12CA6994B000C28BE /* PreviewContainer.swift */; };
 		93CE05B52CA69FE4000C28BE /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B42CA69FE4000C28BE /* GFTabBarController.swift */; };
+		93CE05B92CABCA81000C28BE /* UIWindow+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		93CE05AF2CA56704000C28BE /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		93CE05B12CA6994B000C28BE /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		93CE05B42CA69FE4000C28BE /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
+		93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Current.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 				93CE058C2CA2BD0D000C28BE /* UIViewController+EmptyState.swift */,
 				93CE05A32CA3E61D000C28BE /* Date+Formatted.swift */,
 				93CE05A52CA3ECF8000C28BE /* UIViewController+SafariVC.swift */,
+				93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				93CE05722C9432BA000C28BE /* RestClient.swift in Sources */,
 				93CE051F2C92D479000C28BE /* SceneDelegate.swift in Sources */,
 				93CE05A02CA3C740000C28BE /* GFRepoItemViewController.swift in Sources */,
+				93CE05B92CABCA81000C28BE /* UIWindow+Current.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
