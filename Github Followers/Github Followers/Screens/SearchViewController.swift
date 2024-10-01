@@ -28,6 +28,7 @@ class SearchViewController: UIViewController {
     }
 
     private func configure() {
+        view.addSubviews(logoImageView, usernameTextField, searchButton)
         configureLogoImageView()
         configureTextField()
         configureButton()
@@ -35,7 +36,6 @@ class SearchViewController: UIViewController {
     }
 
     private func configureLogoImageView() {
-        view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.image = UIImage(named: "github")
 
@@ -50,7 +50,6 @@ class SearchViewController: UIViewController {
     }
 
     private func configureTextField() {
-        view.addSubview(usernameTextField)
         usernameTextField.delegate = self
         
         NSLayoutConstraint.activate([
@@ -62,7 +61,6 @@ class SearchViewController: UIViewController {
     }
 
     private func configureButton() {
-        view.addSubview(searchButton)
         searchButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([

@@ -56,6 +56,7 @@
 		93CE05B52CA69FE4000C28BE /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B42CA69FE4000C28BE /* GFTabBarController.swift */; };
 		93CE05B92CABCA81000C28BE /* UIWindow+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */; };
 		93CE05BB2CABCEFC000C28BE /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05BA2CABCEFC000C28BE /* GFAlertContainerView.swift */; };
+		93CE05BD2CABE13E000C28BE /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE05BC2CABE13E000C28BE /* UIView+AddSubviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		93CE05B42CA69FE4000C28BE /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Current.swift"; sourceTree = "<group>"; };
 		93CE05BA2CABCEFC000C28BE /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
+		93CE05BC2CABE13E000C28BE /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+AddSubviews.swift"; path = "../../../../../../UIView+AddSubviews.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 				93CE05A32CA3E61D000C28BE /* Date+Formatted.swift */,
 				93CE05A52CA3ECF8000C28BE /* UIViewController+SafariVC.swift */,
 				93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */,
+				93CE05BC2CABE13E000C28BE /* UIView+AddSubviews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				93CE058D2CA2BD0D000C28BE /* UIViewController+EmptyState.swift in Sources */,
 				93CE059E2CA3C4A5000C28BE /* GFItemInfoViewController.swift in Sources */,
 				93CE05812C95DC82000C28BE /* UIHelper.swift in Sources */,
+				93CE05BD2CABE13E000C28BE /* UIView+AddSubviews.swift in Sources */,
 				93CE05B52CA69FE4000C28BE /* GFTabBarController.swift in Sources */,
 				93CE054E2C92DA18000C28BE /* SearchViewController.swift in Sources */,
 				93CE05532C92E92D000C28BE /* GFButton.swift in Sources */,
