@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol FollowerListVCDelegate: AnyObject {
-    func didRequestFollowers(for username: String) -> Void
-}
-
 class FollowerListViewController: UIViewController {
     var username: String!
 
@@ -263,7 +259,7 @@ extension FollowerListViewController: UISearchControllerDelegate, UISearchResult
     }
 }
 
-extension FollowerListViewController: FollowerListVCDelegate {
+extension FollowerListViewController: UserInfoVCDelegate {
     func didRequestFollowers(for username: String) {
         self.username = username
         self.title = username

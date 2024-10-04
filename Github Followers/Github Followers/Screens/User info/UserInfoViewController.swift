@@ -9,8 +9,7 @@ import UIKit
 import SafariServices
 
 protocol UserInfoVCDelegate: AnyObject {
-    func didTapGithubProfile(for user: User) -> Void
-    func didTapGetFollowers(for user: User) -> Void
+    func didRequestFollowers(for username: String) -> Void
 }
 
 class UserInfoViewController: UIViewController {
@@ -21,7 +20,7 @@ class UserInfoViewController: UIViewController {
     let secondItemView = UIView()
     let dateLabel = GFBodyLabel(textAlignment: .center)
     
-    unowned var delegate: FollowerListVCDelegate!
+    unowned var delegate: UserInfoVCDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,14 +52,9 @@ class UserInfoViewController: UIViewController {
     }
 
     private func configureUIElements(with user: User) {
-        let repoItem = GFRepoItemViewController(user: user)
-        repoItem.delegate = self
-        let followerItem = GFFollowerItemViewController(user: user)
-        followerItem.delegate = self
-
         self.add(childVC: GFUserInfoHeaderViewController(user: user), to: self.headerView)
-        self.add(childVC: repoItem, to: self.firstItemView)
-        self.add(childVC: followerItem, to: self.secondItemView)
+        self.add(childVC: GFRepoItemViewController(user: user, delegate: self), to: self.firstItemView)
+        self.add(childVC: GFFollowerItemViewController(user: user, delegate: self), to: self.secondItemView)
         self.dateLabel.text = "Github since \(user.createdAt.formatted())"
     }
     
@@ -101,7 +95,7 @@ class UserInfoViewController: UIViewController {
     }
 }
 
-extension UserInfoViewController: UserInfoVCDelegate {
+extension UserInfoViewController: ItemInfoVCDelegate {
     func didTapGithubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             alert(title: "Invalid URL", message: "The url attached to this user is invalid.")

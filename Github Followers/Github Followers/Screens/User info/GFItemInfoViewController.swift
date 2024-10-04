@@ -7,6 +7,9 @@
 
 import UIKit
 
+protocol ItemInfoVCDelegate: RepoItemVCDelegate, FollowersItemVCDelegate {
+}
+
 class GFItemInfoViewController: UIViewController {
     let stackView = UIStackView()
     let leadingInfoView = GFItemInfoView()
@@ -14,7 +17,6 @@ class GFItemInfoViewController: UIViewController {
     let actionButton = GFButton()
 
     var user: User!
-    unowned var delegate: UserInfoVCDelegate!
 
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
