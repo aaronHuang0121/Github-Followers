@@ -25,6 +25,19 @@ class FavoritesListViewController: UIViewController {
         }
     }
 
+    @available(iOS 17.0, *)
+    override func updateContentUnavailableConfiguration(using state: UIContentUnavailableConfigurationState) {
+        if favorites.isEmpty {
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = UIImage(systemName: "star")
+            config.text = "No Favorites"
+            config.secondaryText = "Add a favorites on the follower list screen."
+            contentUnavailableConfiguration = config
+        } else {
+            contentUnavailableConfiguration = nil
+        }
+    }
+
     private func configreViewController() {
         view.backgroundColor = .systemBlue
         title = "Favorites"
@@ -48,21 +61,34 @@ class FavoritesListViewController: UIViewController {
 
             switch result {
             case .success(let favorites):
-                if favorites.isEmpty {
-                    showEmptyState(with: "No Favorites?\nAdd one on the follower screen.", in: self.view)
-                } else {
-                    self.favorites = favorites.compactMap({ favorite in
-                        guard let login = favorite.login, let avatarImage = favorite.avatarUrl else {
-                            return nil
-                        }
-                        return .init(login: login, avatarImage: avatarImage)
-                    })
-                    self.tableView.reloadDataOnMainThread()
-                }
+                self.updateUI(with: favorites)
             case .failure(let error):
                 self.alert(title: "Something went wrong.", message: error.localizedDescription)
             }
         }
+    }
+
+    private func updateUnavailableConfiguration() {
+        if #available(iOS 17.0, *) {
+            setNeedsUpdateContentUnavailableConfiguration()
+        } else {
+            if favorites.isEmpty {
+                showEmptyState(with: "No Favorites?\nAdd one on the follower screen.", in: self.view)
+            } else {
+                removeEmptyState(in: self.view)
+            }
+        }
+    }
+
+    private func updateUI(with favorites: [FavoriteEntity]) {
+        self.favorites = favorites.compactMap({ favorite in
+            guard let login = favorite.login, let avatarImage = favorite.avatarUrl else {
+                return nil
+            }
+            return .init(login: login, avatarImage: avatarImage)
+        })
+        updateUnavailableConfiguration()
+        self.tableView.reloadDataOnMainThread()
     }
 }
 
@@ -100,9 +126,7 @@ extension FavoritesListViewController: UITableViewDelegate, UITableViewDataSourc
             case .success:
                 favorites.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .left)
-                if favorites.isEmpty {
-                    self.showEmptyState(with: "No Favorites?\nAdd one on the follower screen.", in: self.view)
-                }
+                updateUnavailableConfiguration()
             case .failure(let error):
                 self.alert(title: "Uable to remove", message: error.localizedDescription)
             }
