@@ -11,7 +11,7 @@ class AlertViewController: UIViewController {
     let containerView = GFAlertContainerView()
     let titleLabel = GFTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = GFBodyLabel(textAlignment: .center)
-    let button = GFButton(backgroundColor: .systemPink, title: "OK")
+    let button = GFButton(color: .systemPink, title: "OK", systemName: "checkmark.circle.fill")
 
     private let padding: CGFloat = 20
     
