@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		936CCEC02CAFCFE5002D818D /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936CCEBF2CAFCFE5002D818D /* UITableView+Ext.swift */; };
 		93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE051C2C92D479000C28BE /* AppDelegate.swift */; };
 		93CE051F2C92D479000C28BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE051E2C92D479000C28BE /* SceneDelegate.swift */; };
 		93CE05262C92D47B000C28BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93CE05252C92D47B000C28BE /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		936CCEBF2CAFCFE5002D818D /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		93CE05192C92D479000C28BE /* Github Followers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Followers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CE051C2C92D479000C28BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93CE051E2C92D479000C28BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,14 +250,15 @@
 		93CE055F2C93F19E000C28BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				93CE05602C93F1D1000C28BE /* UIViewController+Alert.swift */,
-				93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */,
-				93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */,
-				93CE058C2CA2BD0D000C28BE /* UIViewController+EmptyState.swift */,
 				93CE05A32CA3E61D000C28BE /* Date+Formatted.swift */,
+				93CE05762C943695000C28BE /* Encodable+ToQueryItems.swift */,
+				93CE056C2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift */,
+				936CCEBF2CAFCFE5002D818D /* UITableView+Ext.swift */,
+				93CE05BC2CABE13E000C28BE /* UIView+AddSubviews.swift */,
+				93CE05602C93F1D1000C28BE /* UIViewController+Alert.swift */,
+				93CE058C2CA2BD0D000C28BE /* UIViewController+EmptyState.swift */,
 				93CE05A52CA3ECF8000C28BE /* UIViewController+SafariVC.swift */,
 				93CE05B82CABCA81000C28BE /* UIWindow+Current.swift */,
-				93CE05BC2CABE13E000C28BE /* UIView+AddSubviews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				93CE058B2CA2BA16000C28BE /* GFEmptyStateView.swift in Sources */,
 				93CE05AA2CA5430D000C28BE /* FavoriteContainer.xcdatamodeld in Sources */,
 				93CE05772C943695000C28BE /* Encodable+ToQueryItems.swift in Sources */,
+				936CCEC02CAFCFE5002D818D /* UITableView+Ext.swift in Sources */,
 				93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */,
 				93CE05972CA2DF3E000C28BE /* GFSecondaryTitleLabel.swift in Sources */,
 				93CE05502C92DA4A000C28BE /* FavoritesListViewController.swift in Sources */,

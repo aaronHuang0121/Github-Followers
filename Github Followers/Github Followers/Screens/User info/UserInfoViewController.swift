@@ -15,6 +15,9 @@ protocol UserInfoVCDelegate: AnyObject {
 class UserInfoViewController: UIViewController {
     var username: String!
 
+    let scrollView = UIScrollView()
+    let contentView = UIView()
+
     let headerView = UIView()
     let firstItemView = UIView()
     let secondItemView = UIView()
@@ -37,6 +40,21 @@ class UserInfoViewController: UIViewController {
         self.view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismissViewController))
         navigationItem.rightBarButtonItem = doneButton
+    }
+
+    private func configureScrollView() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 
     private func getUserInfo() {

@@ -34,6 +34,7 @@ class FavoritesListViewController: UIViewController {
         tableView.rowHeight = 80
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.removeExcessCells()
         
         tableView.register(FavoriteCell.self, forCellReuseIdentifier: FavoriteCell.reuseId)
     }
@@ -53,10 +54,7 @@ class FavoritesListViewController: UIViewController {
                         }
                         return .init(login: login, avatarImage: avatarImage)
                     })
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
+                    self.tableView.reloadDataOnMainThread()
                 }
             case .failure(let error):
                 self.alert(title: "Something went wrong.", message: error.localizedDescription)
