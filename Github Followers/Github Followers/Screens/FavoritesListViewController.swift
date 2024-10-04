@@ -20,6 +20,9 @@ class FavoritesListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getFavorites()
+        if !favorites.isEmpty {
+            removeEmptyState(in: self.view)
+        }
     }
 
     private func configreViewController() {

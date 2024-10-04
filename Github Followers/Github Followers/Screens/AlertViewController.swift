@@ -92,7 +92,3 @@ class AlertViewController: UIViewController {
         dismiss(animated: true)
     }
 }
-
-#Preview {
-    return AlertViewController(alertTitle: "Alert", message: "This is message", buttonTitle: "OK")
-}

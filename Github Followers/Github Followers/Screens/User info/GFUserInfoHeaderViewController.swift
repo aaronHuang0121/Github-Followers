@@ -95,8 +95,3 @@ class GFUserInfoHeaderViewController: UIViewController {
         ])
     }
 }
-
-#Preview {
-    let viewController = GFUserInfoHeaderViewController(user: .mock)
-    return viewController
-}

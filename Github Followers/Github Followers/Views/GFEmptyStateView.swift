@@ -52,7 +52,3 @@ class GFEmptyStateView: UIView {
         ])
     }
 }
-
-#Preview {
-    return GFEmptyStateView(message: "This user don't have followers.")
-}

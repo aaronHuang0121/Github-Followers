@@ -31,8 +31,3 @@ class LoadingFooter: UICollectionReusableView {
         indicatorView.startAnimating()
     }
 }
-
-#Preview {
-    let cell = LoadingFooter()
-    return cell
-}

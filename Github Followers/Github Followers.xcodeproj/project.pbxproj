@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		936CCEC02CAFCFE5002D818D /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936CCEBF2CAFCFE5002D818D /* UITableView+Ext.swift */; };
+		936CCEC32CAFDD0F002D818D /* FollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936CCEC22CAFDD0F002D818D /* FollowerView.swift */; };
 		93CE051D2C92D479000C28BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE051C2C92D479000C28BE /* AppDelegate.swift */; };
 		93CE051F2C92D479000C28BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE051E2C92D479000C28BE /* SceneDelegate.swift */; };
 		93CE05262C92D47B000C28BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93CE05252C92D47B000C28BE /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		936CCEBF2CAFCFE5002D818D /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		936CCEC22CAFDD0F002D818D /* FollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerView.swift; sourceTree = "<group>"; };
 		93CE05192C92D479000C28BE /* Github Followers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Followers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CE051C2C92D479000C28BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93CE051E2C92D479000C28BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		936CCEC12CAFDCFE002D818D /* FollowerCell */ = {
+			isa = PBXGroup;
+			children = (
+				93CE057B2C956AA4000C28BE /* FollowerCell.swift */,
+				936CCEC22CAFDD0F002D818D /* FollowerView.swift */,
+			);
+			path = FollowerCell;
+			sourceTree = "<group>";
+		};
 		93CE05102C92D479000C28BE = {
 			isa = PBXGroup;
 			children = (
@@ -314,8 +325,8 @@
 		93CE057A2C956A7E000C28BE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				936CCEC12CAFDCFE002D818D /* FollowerCell */,
 				93CE05AD2CA55E36000C28BE /* FavoriteCell.swift */,
-				93CE057B2C956AA4000C28BE /* FollowerCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -524,6 +535,7 @@
 				93CE05BB2CABCEFC000C28BE /* GFAlertContainerView.swift in Sources */,
 				93CE056D2C941DBD000C28BE /* JSONEncoder+JSONDecoder.swift in Sources */,
 				93CE058F2CA2C89A000C28BE /* UserInfoViewController.swift in Sources */,
+				936CCEC32CAFDD0F002D818D /* FollowerView.swift in Sources */,
 				93CE05552C92EC37000C28BE /* GFTextField.swift in Sources */,
 				93CE05912CA2CBB6000C28BE /* User.swift in Sources */,
 				93CE057E2C956E46000C28BE /* GFAvatarImageView.swift in Sources */,
@@ -667,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -725,7 +737,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

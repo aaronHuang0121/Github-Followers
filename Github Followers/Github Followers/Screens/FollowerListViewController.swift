@@ -177,7 +177,7 @@ class FollowerListViewController: UIViewController {
     }
 
     private func updateFavoriteSuccess() {
-        UIView.animate(options: .curveEaseInOut) {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) {
             self.configureSuccessNavigationRightItem()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
                 self?.configureAddNavigationRightItem()
